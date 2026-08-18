@@ -3,7 +3,7 @@
 export default function Portfolio() {	
 	return (
 		
-		<div className="relative min-h-screen overflow-hidden bg-[#31363F] text-foreground">
+		<div className="relative min-h-screen overflow-hidden bg-[#1C1F24] text-foreground">
 
 			<header className="w-full bg-[#222831] text-white">
 			<div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
