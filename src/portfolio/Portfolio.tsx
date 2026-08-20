@@ -1,6 +1,10 @@
-import pfp from '../assets/me.jpg';
-import React, { useState } from 'react';
 
+import tumo from '../assets/tumo.png';
+import logo_42 from '../assets/42.png';
+import React, { useState } from 'react';
+import { Timeline } from './timeline'
+import  Me  from './me.tsx'
+import { ParallaxComponent } from './paralax';
 const svgData = [
  	{
 		id: 1,
@@ -58,31 +62,16 @@ export default function Portfolio() {
 	return (
 
 		<div className="relative w-full min-h-screen overflow-hidden bg-[#16181B] text-foreground">
-
+			{/* <div className='h-500 w-200'>
+				<ParallaxComponent/>
+			</div> */}
 
 			<div className=" mx-60  my-35  text-white">
-				<div className="p-3 h-80 m-auto max-w-200">
-					<div className='flex flex-row gap-5'>
-						<img src={pfp} alt="Hero" className='h-65 rounded-full'/>
-						<div className=' flex flex-col my-2'>
-
-							<p className="mx-2  text-5xl leading-[1] font-[300]">Hey ! I'm</p>
-							<h1 className="m-0 text-9xl leading-[0.85] font-[500]">Matisse</h1>
-							<p className="mx-2 text-2xl leading-[1] font-[200]">
-								Computer science student at 42 School
-							</p>
-
-							<div className='flex flex-row gap-1 m-1 mt-auto  text-xl gap-1.5'>
-								<svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><title>linkedin</title><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
-								<svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><title>github</title><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
-								<svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><title>instagram</title><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
-							</div>
-
-						</div>
-					</div>
+				<div className=" pb-40 m-auto max-w-200">
+					<Me/>
 				</div>
 				<div className="h-64 my-20">
-					<h1 className='text-4xl font-[800] underline decoration-2 underline-offset-5'>About me:</h1>
+					<h1 className='text-4xl font-[800]'>About me:</h1>
 					<div className="flex flex-col gap-5 max-w-300 my-5 text-[20px] ">
 						<p>
 							I've been passionate about computer science since I was a child,
@@ -97,7 +86,7 @@ export default function Portfolio() {
 				</div>
 
 				<div className="h-100">
-					<h1 className='text-4xl font-[800] underline decoration-2 underline-offset-5'>Skills:</h1>
+					<h1 className='text-4xl font-[800] '>Skills:</h1>
 					<div className='mt-10 flex flex-row '>
 						<div className='w-1/2 mx-auto'>
 							<div className="max-w-100 max-h-75 m-auto grid grid-cols-4 grid-rows-3 gap-2 ">
@@ -119,72 +108,44 @@ export default function Portfolio() {
 						</div>
 					</div>
 				</div>
-				<div className="h-250">
-					<div className="p-8">
-						<h2 className="text-3xl text-white font-bold mb-5">Chronology</h2>
-						<div className="flex flex-col grid-cols-9 p-2 mx-auto md:grid">
-							<div className="flex md:contents flex-row-reverse">
-								<div
-									className="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
-									<h3 className="text-lg font-semibold lg:text-xl">New Event 1</h3>
-									<p className="mt-2 leading-6">Description of the first event.</p>
-									<span className="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">2020</span>
-								</div>
-								<div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-									<div className="flex items-center justify-center w-6 h-full">
-										<div className="w-1 mt-22 h-1/2 bg-white">
-										</div>
-									</div>
-									<div className="absolute w-6 h-6 -mt-3 bg-white rounded-full top-1/2"></div>
-								</div>
-							</div>
+				<div className="pt-30 w-150 m-auto">
 
-							<div className="flex md:contents">
-								<div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-									<div className="flex items-center justify-center w-6 h-full">
-										<div className="w-1 h-full bg-white"></div>
-									</div>
-									<div className="absolute w-6 h-6 -mt-3 bg-white  rounded-full top-1/2"></div>
-								</div>
-								<div className="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-6 col-end-10 mr-auto">
-									<h3 className="text-lg font-semibold lg:text-xl">New Event 2</h3>
-									<p className="mt-2 leading-6">Description of the second event.</p>
-									<span className="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">Date 2</span>
-								</div>
-							</div>
 
-							<div className="flex md:contents flex-row-reverse">
-								<div
-									className="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
-									<h3 className="text-lg font-semibold lg:text-xl">New Event 3</h3>
-									<p className="mt-2 leading-6">Description of the first event.</p>
-									<span className="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">Date 3</span>
-								</div>
-								<div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-									<div className="flex items-center justify-center w-6 h-full">
-										<div className="w-1 h-full bg-white">
-										</div>
-									</div>
-									<div className="absolute w-6 h-6 -mt-3 bg-white  rounded-full top-1/2"></div>
-								</div>
-							</div>
+					<Timeline data={[{
+						title: "2023",
+						content: (
+							<div className=''>
+								<img src={tumo} alt="Hero" className='h-30 '/>
+								<p> Tumo is an after-school center for digital creation for 12- to 18-year-olds, studying programming, robotics, and video games.</p>
 
-							<div className="flex md:contents">
-								<div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-									<div className="flex items-center justify-center w-6 h-full">
-										<div className="w-1 h-full bg-white"></div>
-									</div>
-									<div className="absolute w-6 h-6 -mt-3 bg-white border-4 rounded-full top-1/2"></div>
-								</div>
-								<div className="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-6 col-end-10 mr-auto">
-									<h3 className="text-lg font-semibold lg:text-xl">New Event 4</h3>
-									<p className="mt-2 leading-6">Description of the second event.</p>
-									<span className="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">Date 4</span>
-								</div>
 							</div>
+						)
+					}, {
+						title: "2025",
+						content: (
+							<div>
+								<h1 className='text-4xl font-[800]'>Degree</h1>
+								<p>
+									Baccalaureate with a specialization in Math, Computer Science, and Advanced Math
+								</p>
+							</div>
+							)
+					},
+					{
+						title: "2026",
+						content: (
+							<div>
+								<img src={logo_42} alt="Hero" className=''/>
+								<p>
+									Learning various computer programming languages through independent projects, either alone or in groups
+								</p>
+							</div>
+							)
+					}]}/>
 
-						</div>
-					</div>
+
+				</div>
+				<div className="h-300 w-150 m-auto bg-red-900">
 
 				</div>
 
