@@ -1,10 +1,10 @@
 
-import tumo from '../assets/tumo.png';
-import logo_42 from '../assets/42.png';
+
 import React, { useState } from 'react';
-import { Timeline } from './timeline'
+import Time from './timeline'
 import  Me  from './me.tsx'
 import { ParallaxComponent } from './paralax';
+import tap_img from '../assets/tap_spawn.png';
 const svgData = [
  	{
 		id: 1,
@@ -61,16 +61,24 @@ export default function Portfolio() {
 
 	return (
 
-		<div className="relative w-full min-h-screen overflow-hidden bg-[#16181B] text-foreground">
-			{/* <div className='h-500 w-200'>
-				<ParallaxComponent/>
-			</div> */}
-
-			<div className=" mx-60  my-35  text-white">
+		<div className="relative w-full min-h-screen overflow-hidden bg-[#16181B] text-foreground ">
+			<div className="mx-5 my-35 text-white sm:mx-10 lg:mx-40 " >
 				<div className=" pb-40 m-auto max-w-200">
 					<Me/>
 				</div>
-				<div className="h-64 my-20">
+				<div className=" py-10 m-auto max-w-600  border-y grid grid-cols-10 grid-rows-1 gap-4  text-[oklch(62.8%_0_0)] px-10">
+					<div className='m-auto font-grotesk text-[50px]'>1</div>
+					<div className=" m-auto col-span-5">
+						<h1 className='font-bebas text-6xl text-white'>The Answer Protocol</h1>
+						<p className='font-grotesk text-[15px] my-5'>A multiplayer game featuring room exploration and interaction with NPCs, inspired by the graphics of Stardew Valley, built entirely in RUST</p>
+						<p className='font-grotesk text-[15px]'>TCP protocol - 2026 - 2 months</p>
+					</div>
+					<div className="col-span-3 col-start-8">
+						<img src={tap_img} alt="Hero" className='object-fill'/>
+					</div>
+				</div>
+
+				{/* <div className="h-64 my-20">
 					<h1 className='text-4xl font-[800]'>About me:</h1>
 					<div className="flex flex-col gap-5 max-w-300 my-5 text-[20px] ">
 						<p>
@@ -107,47 +115,13 @@ export default function Portfolio() {
 
 						</div>
 					</div>
-				</div>
-				<div className="pt-30 w-150 m-auto">
-
-
-					<Timeline data={[{
-						title: "2023",
-						content: (
-							<div className=''>
-								<img src={tumo} alt="Hero" className='h-30 '/>
-								<p> Tumo is an after-school center for digital creation for 12- to 18-year-olds, studying programming, robotics, and video games.</p>
-
-							</div>
-						)
-					}, {
-						title: "2025",
-						content: (
-							<div>
-								<h1 className='text-4xl font-[800]'>Degree</h1>
-								<p>
-									Baccalaureate with a specialization in Math, Computer Science, and Advanced Math
-								</p>
-							</div>
-							)
-					},
-					{
-						title: "2026",
-						content: (
-							<div>
-								<img src={logo_42} alt="Hero" className=''/>
-								<p>
-									Learning various computer programming languages through independent projects, either alone or in groups
-								</p>
-							</div>
-							)
-					}]}/>
-
-
+				</div> */}
+				{/* <div className="pt-30 w-150 m-auto">
+					<Time/>
 				</div>
 				<div className="h-300 w-150 m-auto bg-red-900">
 
-				</div>
+				</div> */}
 
 			</div>
 

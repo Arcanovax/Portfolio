@@ -7,10 +7,52 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
+import tumo from '../assets/tumo.png';
+import logo_42 from '../assets/42.png';
+
 interface TimelineEntry {
   title: string;
   content: React.ReactNode;
 }
+
+
+
+export default function Time() {
+	return (
+		<Timeline data={[{
+						title: "2023",
+						content: (
+							<div className=''>
+								<img src={tumo} alt="Hero" className='h-30 '/>
+								<p> Tumo is an after-school center for digital creation for 12- to 18-year-olds, studying programming, robotics, and video games.</p>
+
+							</div>
+						)
+					}, {
+						title: "2025",
+						content: (
+							<div>
+								<h1 className='text-4xl font-[800]'>Degree</h1>
+								<p>
+									Baccalaureate with a specialization in Math, Computer Science, and Advanced Math
+								</p>
+							</div>
+							)
+					},
+					{
+						title: "2026",
+						content: (
+							<div>
+								<img src={logo_42} alt="Hero" className=''/>
+								<p>
+									Learning various computer programming languages through independent projects, either alone or in groups
+								</p>
+							</div>
+							)
+					}]}/>
+	)
+}
+
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
