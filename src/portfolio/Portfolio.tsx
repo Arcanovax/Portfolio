@@ -5,6 +5,7 @@ import Time from './timeline'
 import  Me  from './me.tsx'
 import tap_img from '../assets/tap_spawn.png';
 import { useNavigate } from "react-router";
+import Projects from './project.tsx';
 
 
 export default function Portfolio() {
@@ -18,26 +19,9 @@ export default function Portfolio() {
 				<div className=" pb-40 m-auto max-w-200">
 					<Me/>
 				</div>
-				 <div
-           			onClick={() => {navigate("/projects/the-answer-protocol");
-						 window.scrollTo({ top: 0, behavior: "smooth" });}
-					}
-           	 		className="py-10 m-auto max-w-600 border-y-[0.1px] grid grid-cols-10 grid-rows-1 gap-4 text-[oklch(62.8%_0_0)] px-10 cursor-pointer">					<div className='m-auto font-grotesk text-[70px]'>1</div>
-					<div className=" m-auto col-span-5">
-						<h1 className='font-bebas text-6xl text-white'>The Answer Protocol</h1>
-						<p className='font-grotesk text-[15px] mb-5'>A multiplayer game featuring room exploration and interaction with NPCs, inspired by the graphics of Stardew Valley, built entirely in RUST</p>
-						<div className="font-grotesk text-[15px] flex gap-4">
-							<span>TCP protocol</span>
-							<span>|</span>
-							<span>2026</span>
-							<span>|</span>
-							<span>2 months</span>
-						</div>
-					</div>
-					<div className="col-span-3 col-start-8">
-						<img src={tap_img} alt="Hero" className='object-fill'/>
-					</div>
-				</div>
+				 
+					<Projects/>
+				
 
 				{/* <div className="h-64 my-20">
 					<h1 className='text-4xl font-[800]'>About me:</h1>
