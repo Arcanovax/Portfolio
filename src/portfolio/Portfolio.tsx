@@ -19,7 +19,9 @@ export default function Portfolio() {
 					<Me/>
 				</div>
 				 <div
-           			onClick={() => navigate("/projects/the-answer-protocol")}
+           			onClick={() => {navigate("/projects/the-answer-protocol");
+						 window.scrollTo({ top: 0, behavior: "smooth" });}
+					}
            	 		className="py-10 m-auto max-w-600 border-y-[0.1px] grid grid-cols-10 grid-rows-1 gap-4 text-[oklch(62.8%_0_0)] px-10 cursor-pointer">					<div className='m-auto font-grotesk text-[70px]'>1</div>
 					<div className=" m-auto col-span-5">
 						<h1 className='font-bebas text-6xl text-white'>The Answer Protocol</h1>
