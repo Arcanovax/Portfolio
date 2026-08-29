@@ -1,5 +1,6 @@
 import tap_img from '../assets/tap_spawn.png';
 import agent_img from '../assets/agent_smith.png';
+import rag_img from '../assets/rag.png';
 import { useNavigate } from "react-router";
 
 type Project = {
@@ -28,11 +29,20 @@ const projects: Record<string, Project> = {
     "agent_smith":
     {
         title: 'Agent Smith',
-        descr: "A multiplayer game featuring room exploration and interaction with NPCs, inspired by the graphics of Stardew Valley, built entirely in RUST",
+        descr: "An autonomous agent that solves coding problems in a sandbox using MCP tools ",
         branch: "AI",
         years: 2026,
         duration: "1 Months",
         preview: agent_img
+    },
+     "RAG":
+    {
+        title: 'RAG',
+        descr: "An AI that can quickly respond to a knowledge base through indexing and retrieval",
+        branch: "AI",
+        years: 2026,
+        duration: "1 Months",
+        preview: rag_img
     },
 }
 
@@ -61,7 +71,7 @@ export default function Projects() {
                         </div>
                     </div>
                     <div className="col-span-3 col-start-8">
-                        <img src={project.preview} alt="Preview" className='object-fill'/>
+                        <img src={project.preview} className='object-fill'/>
                     </div>
                     
                 </div> ))}
