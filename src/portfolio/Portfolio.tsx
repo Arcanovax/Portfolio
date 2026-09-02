@@ -5,7 +5,7 @@ import Time from './timeline'
 import  Me  from './me.tsx'
 import tap_img from '../assets/tap_spawn.png';
 import { useNavigate } from "react-router";
-import Projects from './project.tsx';
+import Projects from './projects.tsx';
 
 
 export default function Portfolio() {

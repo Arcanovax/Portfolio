@@ -1,6 +1,6 @@
 import React from 'react';
 import Portfolio from './portfolio/Portfolio';
-import TheAnswerProtocol from './portfolio/tap';
+import Project_page from './portfolio/projects/project_page';
 import { Routes, Route } from "react-router-dom";
 
 
@@ -9,11 +9,7 @@ export default function App() {
 	return (
 		<Routes>
             <Route path="/" element={<Portfolio />} />
-
-            <Route
-                path="/projects/the-answer-protocol"
-                element={<TheAnswerProtocol />}
-            />
+            <Route path="/projects/:slug" element={<Project_page />} />
         </Routes>
 	);
 }
